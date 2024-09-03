@@ -8,4 +8,5 @@ if media >= 6:
     print(f"Aluno aprovado com média -> {media}")
 else:
     print (f"Aluno reprovado com média {media}")
-    
+
+
