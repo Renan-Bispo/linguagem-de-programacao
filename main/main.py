@@ -10,3 +10,11 @@ else:
     print (f"Aluno reprovado com média {media}")
 
 
+idade = 70
+
+if idade < 18:
+    print("Menor de idade")
+elif 18 <= idade < 65:
+    print("Adulto")
+else:
+    print("Idoso")
