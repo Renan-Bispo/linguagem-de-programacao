@@ -38,3 +38,13 @@ vogais = ('a','e','i','o','u')
 print(f"tipo de objeto vogais =  {type(vogais)}")
 for p, x in enumerate(vogais):
     print(f"Posição = {p}, valor = {x}")
+
+#COLOCANDO EM PRATICA:
+convidados = ('Alice', 'Bob', 'Carol', 'David', 'Eve')
+confirmados = ['Bob', 'David']
+
+nao_confirmados = [convidado for convidado in convidados if convidado not in confirmados]
+
+print("Pessoas que não confirmaram:")
+for pessoa in nao_confirmados:
+    print(pessoa)
