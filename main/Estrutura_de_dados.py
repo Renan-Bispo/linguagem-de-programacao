@@ -32,3 +32,9 @@ print("preços em reais", precos_em_reais)
 numeros = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
 numeros_pares = list(filter(lambda x: x % 2 == 0, numeros))
 print(numeros_pares)
+
+#tuplas
+vogais = ('a','e','i','o','u')
+print(f"tipo de objeto vogais =  {type(vogais)}")
+for p, x in enumerate(vogais):
+    print(f"Posição = {p}, valor = {x}")
