@@ -20,3 +20,15 @@ print("Antes de aplicar o comprehencions = ", linguagens)
 linguagens = [item.lower() for item in linguagens]
 
 print("Depois de aplicar o comprehencions = ", linguagens)
+
+#utilizando o metodo MAP
+precos_em_dolares = [120,72,12,40,360]
+taxa_de_cambio = 5.25
+precos_em_reais = list(map(lambda x: x * taxa_de_cambio, precos_em_dolares))
+print("preços em reais", precos_em_reais)
+
+
+#utilizando o metodo FILTER
+numeros = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+numeros_pares = list(filter(lambda x: x % 2 == 0, numeros))
+print(numeros_pares)
