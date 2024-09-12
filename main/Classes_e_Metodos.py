@@ -12,4 +12,28 @@ class Pessoa:
 
 
 pessoa1 = Pessoa("João", 22, "Masculino")
-print(pessoa1.greet())
+print(pessoa1.greet()) #usando metodo de saudação
+print(pessoa1.age) #idade antes do aniversario
+pessoa1.birthday() #metodo de aniversario
+print(pessoa1.age) #idade depois do aniversario
+
+
+#Herança
+class Animal:
+    def __init__(self, name):
+        self.name = name
+    def fazer_barulho(self):
+        pass
+class Cachorro(Animal):
+    def fazer_barulho(self):
+        return "AU AU"
+
+class Gato(Animal):
+    def fazer_barulho(self):
+        return "MIAU MAIU"
+
+rex = Cachorro("Rex")
+print(f"{rex.name} faz {rex.fazer_barulho()}")
+xaina = Gato("Xaina")
+print(f"{xaina.name} faz {xaina.fazer_barulho()}")
+
