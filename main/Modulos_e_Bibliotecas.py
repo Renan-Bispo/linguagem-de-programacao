@@ -19,3 +19,16 @@ from math import sqrt, log2, cos
 sqrt(25)
 log2(1024)
 cos(45)
+
+
+import matplotlib.pyplot as plt
+
+x = [1,2,3,4,5]
+y = [4,3,5,1,2]
+
+plt.bar(x,y)
+plt.xlabel('EIXO X')
+plt.ylabel('EIXO Y')
+plt.title('Exemplo de grafico')
+
+plt.show()
