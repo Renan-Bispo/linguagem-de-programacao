@@ -32,3 +32,11 @@ plt.ylabel('EIXO Y')
 plt.title('Exemplo de grafico')
 
 plt.show()
+
+#ATIVIDADE PRÁTICA;
+meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio']
+vendas = [120, 90, 150, 80, 200]
+
+plt.bar(meses, vendas, color='blue')
+plt.title ("Vendas mensais")
+plt.show()
