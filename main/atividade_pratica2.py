@@ -28,6 +28,12 @@ def listar_livros(lista_livro):
         for livro in lista_livro:
             print(livro)
 
+def busca_livro_titulo(lista_livro, titulo):
+    for livro in lista_livro:
+        if livro.titulo == titulo:
+            print(livro)
+        else:
+            print("Livro não encontrado")
 
 livros = []
 
@@ -35,8 +41,5 @@ add_livro(livros,"Até que nada mais importe", "Luciano Subirá", "Religioso")
 add_livro(livros,"O sermão do monte", "Aquele cara", "Religioso")
 add_livro(livros,"O poder da autorresponsaiblidade", "Quem escreveu", "auto-ajuda")
 
-listar_livros(livros)
-remove_livro(livros,"O sermão do monte")
 
-
-listar_livros(livros)
+busca_livro_titulo(livros, "Até que nada mais importe")
