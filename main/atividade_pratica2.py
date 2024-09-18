@@ -1,3 +1,5 @@
+import matplotlib.pyplot as plt
+
 class Livro:
     def __init__(self, titulo, autor, genero):
         self.titulo = titulo
@@ -34,6 +36,14 @@ def busca_livro_titulo(lista_livro, titulo):
             print(livro)
         else:
             print("Livro não encontrado")
+
+def plotar_livro(contagem):
+    genero = list(contagem.keys())
+    quantidade = list(contagem.values())
+    plt.bar(genero, quantidade)
+    plt.xlabel('Gêneros')
+    plt.ylabel('Número de livros')
+    plt.show()
 
 livros = []
 
