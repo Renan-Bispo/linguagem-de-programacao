@@ -1,4 +1,6 @@
 import matplotlib.pyplot as plt
+from fontTools.misc.cython import returns
+
 
 class Livro:
     def __init__(self, titulo, autor, genero):
@@ -37,9 +39,21 @@ def busca_livro_titulo(lista_livro, titulo):
         else:
             print("Livro não encontrado")
 
-def plotar_livro(contagem):
-    genero = list(contagem.keys())
-    quantidade = list(contagem.values())
+def contagem_genero(lista_livro):
+    contagens = {}
+
+    for livro in lista_livro:
+        genero = livro.genero
+        if genero in contagens:
+            contagens[genero] += 1
+        else:
+            contagens[genero] = 1
+
+    return contagens
+
+def plotar_livro(contagens):
+    genero = list(contagens.keys())
+    quantidade = list(contagens.values())
     plt.bar(genero, quantidade)
     plt.xlabel('Gêneros')
     plt.ylabel('Número de livros')
@@ -53,3 +67,5 @@ add_livro(livros,"O poder da autorresponsaiblidade", "Quem escreveu", "auto-ajud
 
 
 busca_livro_titulo(livros, "Até que nada mais importe")
+contagem = contagem_genero(livros)
+plotar_livro(contagem)
